@@ -100,7 +100,7 @@ class CPanel:
 
             time.sleep(CPanel.blink_delay)
 
-            self.__port.setData(~m)
+            self.__port.setData(~m & 0xff)
             self.__port.setDataStrobe(1)
             time.sleep(0.1)
             self.__port.setDataStrobe(0)
